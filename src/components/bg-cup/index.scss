@@ -1,0 +1,19 @@
+
+.container{
+    .cup-img{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .text{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            font-size: 13px;
+            p{
+                font-size: 28px;
+            }
+        }
+    }
+}

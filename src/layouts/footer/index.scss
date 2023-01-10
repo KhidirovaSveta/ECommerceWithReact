@@ -1,0 +1,85 @@
+.footer {
+  background-color: #fff;
+  padding: 70px 0;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-media {
+      .social-text {
+        margin-bottom: 28px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      .fa-brands {
+        padding-right: 35px;
+        font-size: 20px;
+        color: rgba($color: #2c2c2c, $alpha: 0.8);
+        transition: all 0.5s;
+        &:hover {
+          color: #ccc10b;
+        }
+      }
+      .studio {
+        margin-top: 55px;
+        color: rgba($color: #262626, $alpha: 0.8);
+      }
+    }
+    // section 2
+
+    .contact {
+      .phone {
+        font-weight: 600;
+        margin-bottom: 28px;
+        font-size: 18px;
+      }
+      .site {
+        font-weight: 600;
+        margin-bottom: 55px;
+      }
+      a {
+        text-decoration: none;
+        color: rgba($color: #262626, $alpha: 0.8);
+        transition: all 0.5s;
+        &:hover {
+          color: #ccc10b;
+        }
+      }
+    }
+    .email {
+      .be-text {
+        margin-bottom: 28px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      input {
+        margin-bottom: 55px;
+        width: 250px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($color: #262626, $alpha: 0.2);
+        font-size: 17px;
+      }
+      .footer-btn {
+        border: none;
+        background-color: transparent;
+        border-bottom: 3px solid #7f9ad1;
+        cursor: pointer;
+        // background: linear-gradient(to right, #7f9ad1, #ccc10b);
+
+        font-weight: 600;
+        font-size: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: rgba($color: #262626, $alpha: 0.8);
+        transition: all 0.5s;
+        &:hover {
+          color: #ccc10b;
+        }
+      }
+    }
+  }
+}
