@@ -7,12 +7,25 @@
         }
         .text{
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 32%;
+            left: 45%;
             color: #fff;
-            font-size: 13px;
+            font-size: 18px;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .homelink{
+                border-right: 3px solid #fff;
+                padding: 0 7px;
+                margin-left: 7px;
+            }
+            .acc{
+                padding-left: 7px;
+            }
             p{
-                font-size: 28px;
+                margin-top: 25px;
+                font-size: 50px;
             }
         }
     }

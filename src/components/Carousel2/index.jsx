@@ -27,6 +27,7 @@ const Carousel2 = () => {
         // modules={[Pagination]}
         className="mySwiper"
       >
+   
         <SwiperSlide> <img src={Product11} alt="" /></SwiperSlide>
         <SwiperSlide> <img src={Product12} alt="" /></SwiperSlide>
         <SwiperSlide> <img src={Product13} alt="" /></SwiperSlide>

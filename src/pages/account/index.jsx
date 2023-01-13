@@ -1,77 +1,54 @@
 import React from "react";
 import BgCup from "../../components/bg-cup";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { useFormik } from "formik";
 import "./index.scss";
+import { Link } from "react-router-dom";
 
 const Account = () => {
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
-  };
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   return (
     <div className="container">
       <BgCup />
-      <h1>LOGIN</h1>
-      <p>Please login below account detail</p>
-      <div className="form">
-        <Form
-          name="normal_login"
-          className="login-form"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-        >
-          <Form.Item
-            name="username"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Username!",
-              },
-            ]}
-          >
-            <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
+      <div className="account">
+        <h1>LOGIN</h1>
+        <p>Please login below account detail</p>
+        <div className="form">
+          <form onSubmit={formik.handleSubmit}>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email Address"
+              onChange={formik.handleChange}
+              value={formik.values.email}
             />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Password!",
-              },
-            ]}
-          >
-            <Input
-              prefix={<LockOutlined className="site-form-item-icon" />}
+            <br />
+            <input
+              id="password"
+              name="password"
               type="password"
               placeholder="Password"
+              onChange={formik.handleChange}
+              value={formik.values.firstName}
             />
-          </Form.Item>
-          <Form.Item>
-            <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item>
-
-            <a className="login-form-forgot" href="">
-              Forgot password
-            </a>
-          </Form.Item>
-
-          <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
-            >
-              Log in
-            </Button>
-            Or <a href="">register now!</a>
-          </Form.Item>
-        </Form>
+            <br />
+            <button className="signin" type="submit">
+              SIGN IN
+            </button>
+            <button type="submit">FORGOT PASSWORD?</button>
+            <p>DON'T HAVE AN ACCOUNT?</p>
+            <Link> Create Account?</Link>
+          </form>
+        </div>
       </div>
     </div>
   );
