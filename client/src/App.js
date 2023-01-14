@@ -5,8 +5,11 @@ import Blog from "./pages/blog";
 import Footer from "./layouts/footer";
 import Account from "./pages/account";
 import DetailPage from "./pages/details-page";
+import { useState } from "react";
 
 function App() {
+  const [basket, setBasket] = useState([])
+
   return (
     <div className="App">
       <Header />

@@ -49,6 +49,7 @@ const Carousel = () => {
                   </Link>
                   <div className="products-name">
                     <p>{products.name}</p>
+                    <p>{products.unitPrice}</p>
                   </div>
                 </div>
               </SwiperSlide>

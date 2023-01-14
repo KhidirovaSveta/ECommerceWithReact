@@ -1,3 +1,86 @@
-.container{
+.container {
+  .details {
     max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-family: "Urbanist", sans-serif;
+    display: flex;
+    .img-details {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//  info about product
+
+.product-info {
+  margin-left: 20px;
+  .navlink {
+    margin-bottom: 18px;
+    display: flex;
+    text-transform: uppercase;
+    color: rgba($color: #242424, $alpha: 0.5);
+    a {
+      text-decoration: none;
+      color: rgba($color: #242424, $alpha: 0.5);
+      padding: 0 12px;
+    }
+  }
+
+  // product name
+
+  .products-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    // justify-content: space-between;
+    h1 {
+      font-weight: 550;
+      font-size: 30px;
+    }
+    p {
+      font-size: 19px;
+    }
+  }
+  // product price
+
+  .price-section {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    .price {
+      font-size: 18px;
+      color: rgba($color: #242424, $alpha: 0.7);
+    }
+    .sale {
+      background-color: #ccc10b;
+      color: #fff;
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+  .availability {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .availabil {
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .av {
+      color: rgb(0, 152, 0);
+      font-weight: 500;
+    }
+  }
+  .description {
+    font-size: 15px;
+    color: rgba($color: #242424, $alpha: 0.7);
+    line-height: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
 }
