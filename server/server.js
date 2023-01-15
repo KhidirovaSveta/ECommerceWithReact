@@ -10,7 +10,7 @@ const products = [
   {
     id: 1,
     name: "Wood Stand",
-    unitPrice: "£30.00",
+    unitPrice: 30.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -33,7 +33,7 @@ const products = [
   {
     id: 2,
     name: "Wood Kitchen Stand",
-    unitPrice: "£21.00",
+    unitPrice: 21.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -53,7 +53,7 @@ const products = [
   {
     id: 3,
     name: "Wooden Stand",
-    unitPrice: "£30.00",
+    unitPrice: 30.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -76,7 +76,7 @@ const products = [
   {
     id: 4,
     name: "Wood Bowl",
-    unitPrice: "£30.00",
+    unitPrice: 30.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -96,7 +96,7 @@ const products = [
   {
     id: 5,
     name: "Ceramic Kettle",
-    unitPrice: "£22.00",
+    unitPrice: 22.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -116,7 +116,7 @@ const products = [
   {
     id: 6,
     name: "Wooden Bowl Set",
-    unitPrice: "£18.00",
+    unitPrice: 18.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -126,7 +126,7 @@ const products = [
     img3: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-03-b_a2a4a852-0de0-4838-aeef-edebdb17f974.jpg?v=1641206188",
     // },
     sale: "52%",
-    priceOff: "£50.00",
+    priceOff: 50.00,
     // size: {
       s: "S",
       m: "M",
@@ -138,7 +138,7 @@ const products = [
   {
     id: 7,
     name: "Antique Kettle",
-    unitPrice: "£18.00",
+    unitPrice: 18.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -159,7 +159,7 @@ const products = [
   {
     id: 8,
     name: "Ceramic Stand",
-    unitPrice: "£18.00",
+    unitPrice: 18.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
@@ -179,7 +179,7 @@ const products = [
   {
     id: 9,
     name: "Antique Kettle",
-    unitPrice: "£11.00",
+    unitPrice: 11.00,
     Availability: "In Stock",
     description:
       "Lorem Ipsum is simply dummy the printing and typesetting industry been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry",
