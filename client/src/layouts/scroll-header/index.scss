@@ -1,5 +1,5 @@
 .mainHeader {
-  padding: 12px 18px;
+  padding: 12px 25px;
   background: transparent;
   // text-align: center;
 }
@@ -10,7 +10,7 @@
   font-size: 18px;
 }
 .fixedTop {
-  width: 100%;
+  width: 98%;
   padding: 12px 18px;
   position: fixed;
   z-index: 3;
@@ -30,19 +30,6 @@
       column-gap: 25px;
       li {
         list-style: none;
-      }
-    }
-    .dropdown {
-      display: flex;
-      display: inline-block;
-      position: relative;
-      .dropdown-options {
-        display: none;
-        position: absolute;
-        overflow: auto;
-        z-index: 2;
-        background-color: #fff;
-        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
       }
     }
   }

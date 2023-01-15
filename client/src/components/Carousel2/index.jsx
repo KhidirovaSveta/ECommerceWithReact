@@ -28,7 +28,12 @@ const Carousel2 = () => {
         className="mySwiper"
       >
    
+        <div className="card">
         <SwiperSlide> <img src={Product11} alt="" /></SwiperSlide>
+        <div className="text">
+          <p>salam</p>
+        </div>
+        </div>
         <SwiperSlide> <img src={Product12} alt="" /></SwiperSlide>
         <SwiperSlide> <img src={Product13} alt="" /></SwiperSlide>
         <SwiperSlide> <img src={Product4} alt="" /></SwiperSlide>

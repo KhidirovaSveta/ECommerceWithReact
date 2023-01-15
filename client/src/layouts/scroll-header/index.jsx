@@ -2,8 +2,10 @@ import React, { useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
 import Logo from "../../images/logo.webp";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Menu, Space } from "antd";
 
-const Header = () => {
+const Header = ({ count, setCount }) => {
   const stickyHeader = useRef();
   useLayoutEffect(() => {
     const mainHeader = document.getElementById("mainHeader");
@@ -17,6 +19,64 @@ const Header = () => {
     };
     window.addEventListener("scroll", fixedHeader);
   }, []);
+
+  // page
+
+  const items = [
+    {
+      key: "1",
+      label: "About Us",
+      children: [
+        {
+          key: "1-1",
+          label: "About Modern",
+        },
+        {
+          key: "1-2",
+          label: "About Simple",
+        },
+      ],
+    },
+
+    {
+      key: "2",
+      label: "Contact Us",
+      children: [
+        {
+          key: "1-1",
+          label: "Contact Modern",
+        },
+        {
+          key: "1-2",
+          label: "Contact Simple",
+        },
+      ],
+    },
+    {
+      key: "3",
+      label: "FAQS",
+    },
+    {
+      key: "4",
+      label: "Payment Policy",
+    },
+    {
+      key: "5",
+      label: "Privacy Policy",
+    },
+    {
+      key: "6",
+      label: "Payment Policy",
+    },
+    {
+      key: "7",
+      label: "Terms & Condition",
+    },
+    {
+      key: "8",
+      label: "Page 404",
+    },
+  ];
 
   return (
     <div>
@@ -33,16 +93,74 @@ const Header = () => {
                   {" "}
                   <NavLink to={"/"}> Home </NavLink>
                 </li>
-                <div className="dropdown">
-                  <li>
-                    {" "}
-                    Shop
-                    <div className="dropdown-options">
-                      <ul> Wood </ul>
-                      <ul> Wood </ul>
-                    </div>
-                  </li>
-                </div>
+                <li>
+                  <Dropdown
+                    overlay={
+                      <Menu>
+                        <Menu.Item key="0">Banner With Sidebar</Menu.Item>
+                        <Menu.Item key="1">Boxed Banner</Menu.Item>
+                        <Menu.Item key="2">Infinite Ajaxscroll</Menu.Item>
+                        <Menu.Item key="3">Horizontal Filter</Menu.Item>
+                        <Menu.Item key="4">Navigation Filter</Menu.Item>
+                        <Menu.Item key="5">Navigation Filter</Menu.Item>
+                        <Menu.Item key="6">Off-Canvas Filter</Menu.Item>
+                        <Menu.Item key="7">Right Toggle Sidebar</Menu.Item>
+                      </Menu>
+                    }
+                    trigger={["hover"]}
+                  >
+                    <a
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Shop
+                    </a>
+                  </Dropdown>
+                </li>
+
+                <li>
+                  <Dropdown
+                    overlay={
+                      <Menu>
+                        <Menu.Item key="0">Banner With Sidebar</Menu.Item>
+                        <Menu.Item key="1">Boxed Banner</Menu.Item>
+                        <Menu.Item key="2">Infinite Ajaxscroll</Menu.Item>
+                        <Menu.Item key="3">Horizontal Filter</Menu.Item>
+                        <Menu.Item key="4">Navigation Filter</Menu.Item>
+                        <Menu.Item key="5">Navigation Filter</Menu.Item>
+                        <Menu.Item key="6">Off-Canvas Filter</Menu.Item>
+                        <Menu.Item key="7">Right Toggle Sidebar</Menu.Item>
+                      </Menu>
+                    }
+                    trigger={["hover"]}
+                  >
+                    <a
+                      className="ant-dropdown-link"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Categories
+                    </a>
+                  </Dropdown>
+                </li>
+
+                <li>
+                  {" "}
+                  <NavLink to={"/pages/blog"}> Blog </NavLink>
+                </li>
+
+                <li>
+                  <Dropdown
+                    menu={{
+                      items,
+                    }}
+                  >
+                    {/* <a onClick={(e) => e.preventDefault()}> */}
+                    <Space>
+                      Page
+                      <DownOutlined />
+                    </Space>
+                    {/* </a> */}
+                  </Dropdown>
+                </li>
               </ul>
             </nav>
 
@@ -55,7 +173,10 @@ const Header = () => {
               </NavLink>
               <i className="fa-regular fa-heart icon"></i>
               <NavLink to={"/pages/basket-page"}>
-                <i className="fa-solid fa-basket-shopping icon"></i>
+              <i className="fa-solid fa-bag-shopping icon">
+                  {" "}
+                  <sub>{count}</sub>
+                </i>
               </NavLink>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "./index.scss";
 import { Helmet } from "react-helmet";
 
-const DetailPage = ({ basket, setBasket }) => {
+const DetailPage = ({ basket, setBasket, count, setCount }) => {
   const [detail, setDetails] = useState([]);
   const { id } = useParams();
 
@@ -16,7 +16,7 @@ const DetailPage = ({ basket, setBasket }) => {
   const handleAddToCard = (obj) => {
     if (!basket.find((el) => el.id === obj.id)) {
       setBasket([...basket, obj]);
-      console.log(basket);
+      setCount(count + 1);
     } else {
       alert("Already added");
     }
@@ -57,7 +57,7 @@ const DetailPage = ({ basket, setBasket }) => {
           {/* product price */}
           <div className="price-section">
             <p className="price">
-              {detail.unitPrice} <strike>{detail.priceOff}</strike>
+            £{detail.unitPrice} <strike>£{detail.priceOff}</strike>
             </p>
             <div className="sale"> {detail?.sale}</div>
           </div>
@@ -83,10 +83,10 @@ const DetailPage = ({ basket, setBasket }) => {
           {/* size section */}
           <div className="size-section">
             <p>SIZE: </p>
-            <div className="s-size size "> S </div>
-            <div className="m-size size"> M </div>
-            <div className="l-size size"> L </div>
-            <div className="xl-size size"> XL </div>
+            <div className="s-size size "> {detail.s} </div>
+            <div className="m-size size"> {detail.m} </div>
+            <div className="l-size size"> {detail.l} </div>
+            <div className="xl-size size"> {detail.xl} </div>
           </div>
 
           {/* ADD Button */}

@@ -12,22 +12,23 @@ import Header from "./layouts/scroll-header";
 
 function App() {
   const [basket, setBasket] = useState([]);
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       {/* <Head /> */}
-      <Header/>
+      <Header count={count} setCount={setCount}/>
       <Routes>
-        <Route path="/" element={<Home basket={basket} setBasket={setBasket} />} />
+        <Route path="/" element={<Home basket={basket} setBasket={setBasket}  count={count} setCount={setCount}/>} />
         <Route path="/pages/blog" element={<Blog />} />
         <Route path="/pages/account" element={<Account />} />
         <Route
           path="/pages/details-page/:id"
-          element={<DetailPage basket={basket} setBasket={setBasket} />}
+          element={<DetailPage basket={basket} setBasket={setBasket} count={count} setCount={setCount} />}
         />
         <Route
           path="/pages/basket-page"
-          element={<BasketPage basket={basket} setBasket={setBasket} />}
+          element={<BasketPage basket={basket} setBasket={setBasket} count={count} setCount={setCount}/>}
         />
         <Route path="/pages/error-page" element={<ErrorPage/>}/>
       </Routes>

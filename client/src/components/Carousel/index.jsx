@@ -19,7 +19,7 @@ import { useState } from "react";
 import axios from "axios";
 // import { Pagination } from "swiper";
 
-const Carousel = ({ basket, setBasket }) => {
+const Carousel = ({ basket, setBasket, count, setCount }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Carousel = ({ basket, setBasket }) => {
   const handleAddToCard = (obj) => {
     if (!basket.find((el) => el.id === obj.id)) {
       setBasket([...basket, obj]);
-      console.log(basket);
+      setCount(count + 1);
     } else {
       alert("Already added");
     }
@@ -62,7 +62,9 @@ const Carousel = ({ basket, setBasket }) => {
                       className="btnAdd"
                       onClick={() => handleAddToCard(products)}
                     >
-                      ADD TO CARD{" "}
+                      {!basket.find((el) => el.id === products.id)
+                        ? "ADD TO CARD"
+                        : "ALREADY ADDED"}
                     </button>
                   </div>
                 </div>
