@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./index.scss";
 import Bgphoto from "../../images/bg-img.webp";
 import Carousel from "../../components/Carousel";
@@ -13,13 +13,13 @@ const Home = ({ basket, setBasket }) => {
     <div className="home">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home Page</title>
+        <title>Home</title>
       </Helmet>
       <div className="main-text">
         <img src={Bgphoto} alt="" className="image" />
         <h3 className="gradient">unique</h3>
         <h1 className="decor"> DECOR </h1>
-        <Button btnName={"NEW COLLECTION"} />
+       <NavLink to={"/pages/error-page"}> <Button btnName={"NEW COLLECTION"} /></NavLink>
       </div>
 
       <div className="container">
@@ -87,7 +87,7 @@ const Home = ({ basket, setBasket }) => {
       </div>
 
       <div className="btn-2">
-        <Button btnName={"ALL PRODUCTS"} />
+      <NavLink to={"/pages/error-page"}><Button btnName={"ALL PRODUCTS"} /></NavLink>
       </div>
 
       {/* Decorative links section */}

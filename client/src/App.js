@@ -7,6 +7,7 @@ import Account from "./pages/account";
 import DetailPage from "./pages/details-page";
 import { useState } from "react";
 import BasketPage from "./pages/basket-page";
+import ErrorPage from "./pages/error-page";
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -26,6 +27,7 @@ function App() {
           path="/pages/basket-page"
           element={<BasketPage basket={basket} setBasket={setBasket} />}
         />
+        <Route path="/pages/error-page" element={<ErrorPage/>}/>
       </Routes>
       <Footer />
     </div>

@@ -21,52 +21,62 @@
           height: 75px;
           background-repeat: no-repeat;
         }
-          // ul {
-          //   display: flex;
-          //   list-style: none;
-          //   column-gap: 10px;
-          //   li {
-          //     position: relative;
+        // ul {
+        //   display: flex;
+        //   list-style: none;
+        //   column-gap: 10px;
+        //   li {
+        //     position: relative;
 
-          //     a{
-          //       text-decoration: none;
-          //       display: block;
-          //     }
-          //   }
-          //   .dropdown {
-          //     position: absolute;
-          //   }
-          // }
+        //     a{
+        //       text-decoration: none;
+        //       display: block;
+        //     }
+        //   }
+        //   .dropdown {
+        //     position: absolute;
+        //   }
+        // }
+        .navBar {
+          display: flex;
           .dropdown {
+            a {
+              color: #000000;
+              text-decoration: none;
+              padding: 20px 40px;
+              &:hover {
+                color: #0a0a23;
+                // background-color: #ddd;
+              }
+            }
+            display: flex;
             display: inline-block;
             position: relative;
             .dropdown-options {
               display: none;
               position: absolute;
               overflow: auto;
-              background-color:#fff;
-              box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+              z-index: 2;
+              background-color: #fff;
+              box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
               a {
                 display: block;
                 color: #000000;
                 padding: 5px;
                 text-decoration: none;
-                padding:20px 40px;
+                padding: 20px 40px;
                 &:hover {
                   color: #0a0a23;
                   // background-color: #ddd;
                 }
               }
             }
-            .flex{
-              display: flex;
-            }
           }
-          
-          .dropdown:hover .dropdown-options {
-            display: block;
-          }
-          
+        }
+
+        .dropdown:hover .dropdown-options {
+          display: block;
+        }
 
         .icon {
           color: #0a0a23;
@@ -76,5 +86,4 @@
       }
     }
   }
-
 }
