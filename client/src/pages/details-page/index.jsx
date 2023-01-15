@@ -68,6 +68,15 @@ const DetailPage = ({ basket, setBasket }) => {
 
           <p className="description">{detail.description}</p>
 
+          {/* size section */}
+          <div className="size-section">
+            <p>SIZE: </p>
+            <div className="s-size size "> S </div>
+            <div className="m-size size"> M </div>
+            <div className="l-size size"> L </div>
+            <div className="xl-size size"> XL </div>
+          </div>
+
           {/* ADD Button */}
           <div className="add-section">
             <button className="addBtn" onClick={() => handleAddToCard(detail)}>
@@ -76,6 +85,42 @@ const DetailPage = ({ basket, setBasket }) => {
                 : "ALREADY ADDED"}
             </button>
             <button className="buyBtn"> BUY NOW </button>
+          </div>
+
+          {/* social media and paypal */}
+          <div className="share">
+            <p className="social-media">
+              SHARE:
+              <a
+                href="https://www.facebook.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <i className="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/" rel="noreferrer" target="_blank">
+                <i className="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.pinterest.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <i className="fa-brands fa-pinterest-p"></i>
+              </a>
+            </p>
+
+            <i className="fa-brands fa-cc-visa payment"></i>
+            <i className="fa-brands fa-cc-mastercard payment"></i>
+            <i className="fa-brands fa-cc-amex payment"></i>
+            <i className="fa-brands fa-cc-paypal payment"></i>
           </div>
         </div>
       </div>

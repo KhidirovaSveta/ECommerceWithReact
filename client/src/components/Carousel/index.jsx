@@ -19,12 +19,21 @@ import { useState } from "react";
 import axios from "axios";
 // import { Pagination } from "swiper";
 
-const Carousel = () => {
+const Carousel = ({ basket, setBasket }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:8080/").then((data) => setProducts(data.data));
   }, []);
+
+  const handleAddToCard = (obj) => {
+    if (!basket.find((el) => el.id === obj.id)) {
+      setBasket([...basket, obj]);
+      console.log(basket);
+    } else {
+      alert("Already added");
+    }
+  };
 
   return (
     <div className="carousel">
@@ -49,7 +58,7 @@ const Carousel = () => {
                   </Link>
                   <div className="products-name">
                     <p>{products.name}</p>
-                    <button>Add To Card </button>
+                    <button onClick={() => handleAddToCard(products)}>Add To Card </button>
                   </div>
                 </div>
               </SwiperSlide>

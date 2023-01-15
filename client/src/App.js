@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home basket={basket} setBasket={setBasket} />} />
         <Route path="/pages/blog" element={<Blog />} />
         <Route path="/pages/account" element={<Account />} />
         <Route

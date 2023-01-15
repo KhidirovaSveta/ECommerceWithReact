@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import BgCup from "../../components/bg-cup";
 import "./index.scss";
 
@@ -21,7 +21,7 @@ const BasketPage = ({ basket, setBasket }) => {
               <>
                 <div className="main-info">
                   <div className="img">
-                    <img src={el.img1} alt="" />
+                    <Link to={"/pages/details-page/" + el.id}><img src={el.img1} alt="" /></Link>
                   </div>
                   <div className="info">
                     <p> {el.name}</p>

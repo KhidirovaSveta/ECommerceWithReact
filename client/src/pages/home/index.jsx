@@ -6,7 +6,7 @@ import Carousel from "../../components/Carousel";
 import Button from "../../components/button";
 import Carousel2 from "../../components/Carousel2";
 
-const Home = () => {
+const Home = ({ basket, setBasket }) => {
   return (
     <div className="home">
       <div className="main-text">
@@ -78,7 +78,7 @@ const Home = () => {
       {/* Carousel section */}
 
       <div className="carousel">
-        <Carousel />
+        <Carousel  basket={basket} setBasket={setBasket}/>
       </div>
 
       <div className="btn-2">

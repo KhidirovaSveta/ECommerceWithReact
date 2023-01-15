@@ -18,7 +18,7 @@
 //  info about product
 
 .product-info {
-  margin-left: 20px;
+  margin-left: 50px;
   .navlink {
     margin-bottom: 18px;
     display: flex;
@@ -27,7 +27,7 @@
     a {
       text-decoration: none;
       color: rgba($color: #242424, $alpha: 0.5);
-      padding: 0 12px;
+      padding-right: 12px;
     }
   }
 
@@ -46,6 +46,7 @@
       font-size: 19px;
     }
   }
+
   // product price
 
   .price-section {
@@ -84,8 +85,29 @@
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   }
-  .add-section {
+
+  .size-section{
     margin-top: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+    .size{
+      border: 1px solid #242424;
+      padding: 3px 12px;
+      margin: 0 10px;
+      transition: all 0.5s;
+       &:hover{
+        border: 1px solid #ccc10b;
+       }
+    }
+  }
+
+  // add-section
+
+  .add-section {
+    margin: 30px 0;
+
     button {
       cursor: pointer;
       font-size: 17px;
@@ -100,6 +122,36 @@
     .buyBtn {
       padding: 12px 20px;
       background-color: #ccc10b;
+    }
+  }
+
+  // social-media section
+
+  .share {
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    .social-media {
+      font-size: 17px;
+      margin-bottom: 15px;
+      i {
+        margin-left: 15px;
+      }
+      .fa-facebook-f{
+        color: rgb(0, 0, 158);
+      }
+      .fa-twitter{
+        color: rgb(0, 145, 255);
+      }
+      .fa-instagram{
+        color: rgb(247, 74, 0);
+      }
+      .fa-pinterest-p{
+        color: rgb(169, 0, 0);
+      }
+    }
+    .payment {
+      font-size: 20px;
+      padding-right: 15px;
     }
   }
 }
