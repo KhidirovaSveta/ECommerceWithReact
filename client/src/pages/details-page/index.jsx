@@ -31,8 +31,6 @@ const DetailPage = ({ basket, setBasket, count, setCount }) => {
       </Helmet>
 
       <div className="details">
-        {/* <img src={detail.img1} alt=""  className="main-img"/> */}
-
         <div className="img-details">
           <img src={detail.img1} class="big-img" alt="Living Room" />
         </div>
@@ -51,15 +49,24 @@ const DetailPage = ({ basket, setBasket, count, setCount }) => {
           {/* product name */}
           <div className="products-name">
             <h1>{detail.name}</h1>
-            {/* <p>No reviews</p> */}
+            <p>No reviews</p>
           </div>
 
           {/* product price */}
           <div className="price-section">
-            <p className="price">
-            £{detail.unitPrice} <strike>£{detail.priceOff}</strike>
-            </p>
-            <div className="sale"> {detail?.sale}</div>
+            <div id="price">
+              <p className="price">
+                £{detail.unitPrice}.00  <strike> {detail.priceOff}</strike>
+              </p>
+              <div className="sale"> {detail?.sale}</div>
+            </div>
+            <div className="stars">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
           </div>
 
           <div className="availability">

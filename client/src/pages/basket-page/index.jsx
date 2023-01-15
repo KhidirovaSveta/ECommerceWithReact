@@ -67,8 +67,8 @@ const BasketPage = ({ basket, setBasket, count, setCount }) => {
                 <select name="country" id="country">
                   <option value="Azerbaijan">Azerbaijan</option>
                   <option value="Canada">Canada</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option value="Germany">Germany</option>
+                  <option value="China">China</option>
                 </select>
                 <br />
               </div>
