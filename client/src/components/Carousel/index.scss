@@ -50,19 +50,20 @@ body {
 // .products-name{
 //   margin-bottom: 50px;
 // }
-
-.slider {
-  .products-name {
+.carousel {
+  margin-bottom: 50px;
+  .slider {
+    .products-name {
       button {
         border: none;
         background-color: transparent;
         cursor: pointer;
         margin-bottom: 15px;
         transition: all 0.4s;
-        &:hover{
+        &:hover {
           border-bottom: 2px solid #ccc10b;
         }
       }
     }
   }
-
+}

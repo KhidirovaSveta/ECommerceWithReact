@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./layouts/header";
+// import Header from "./layouts/header";
 import Home from "./pages/home";
 import Blog from "./pages/blog";
 import Footer from "./layouts/footer";
@@ -8,13 +8,15 @@ import DetailPage from "./pages/details-page";
 import { useState } from "react";
 import BasketPage from "./pages/basket-page";
 import ErrorPage from "./pages/error-page";
+import Header from "./layouts/scroll-header";
 
 function App() {
   const [basket, setBasket] = useState([]);
 
   return (
     <div className="App">
-      <Header />
+      {/* <Head /> */}
+      <Header/>
       <Routes>
         <Route path="/" element={<Home basket={basket} setBasket={setBasket} />} />
         <Route path="/pages/blog" element={<Blog />} />

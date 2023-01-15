@@ -9,14 +9,16 @@ body {
     position: absolute;
     width: 100%;
     left: 0%;
-    top: -22%;
+    top: -42%;
     z-index: -2;
   }
   .main-text {
+    box-sizing: border-box;
     text-align: center;
     position: relative;
     .gradient {
-      padding-top: 30px;
+      // padding-top: 30px;
+      margin-top: 55px;
       font-family: "Sacramento", cursive;
       font-weight: 400;
       font-style: italic;
@@ -28,7 +30,7 @@ body {
     .decor {
       position: absolute;
       left: 36%;
-      top: 42%;
+      top: 17%;
       font-size: 120px;
       color: #2c3039;
     }

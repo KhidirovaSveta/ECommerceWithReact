@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { Link, NavLink } from "react-router-dom";
 
-const Header = () => {
+const Head = () => {
   return (
     <div className="main">
       <div className="container">
@@ -48,4 +48,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Head;
