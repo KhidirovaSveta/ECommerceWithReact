@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./index.scss";
+import { Helmet } from "react-helmet";
 
 const DetailPage = ({ basket, setBasket }) => {
   const [detail, setDetails] = useState([]);
@@ -24,6 +25,10 @@ const DetailPage = ({ basket, setBasket }) => {
   return (
     <div className="container">
       {/* img section */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Details Page</title>
+      </Helmet>
 
       <div className="details">
         {/* <img src={detail.img1} alt=""  className="main-img"/> */}

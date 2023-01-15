@@ -3,6 +3,7 @@ import BgCup from "../../components/bg-cup";
 import { useFormik } from "formik";
 import "./index.scss";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Account = () => {
   const formik = useFormik({
@@ -17,7 +18,11 @@ const Account = () => {
   });
   return (
     <div className="container">
-      <BgCup bgCupName={"Account"} bgName={"Account"}/>
+      <BgCup bgCupName={"Account"} bgName={"Account"} />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Account</title>
+      </Helmet>
       <div className="account">
         <h1>LOGIN</h1>
         <p>Please login below account detail</p>

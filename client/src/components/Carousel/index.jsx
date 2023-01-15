@@ -51,14 +51,19 @@ const Carousel = ({ basket, setBasket }) => {
           return (
             <>
               <SwiperSlide key={products.id}>
-                <div className="slider" >
+                <div className="slider">
                   <Link to={"/pages/details-page/" + products.id}>
                     {" "}
                     <img src={products.img1} alt="" />{" "}
                   </Link>
                   <div className="products-name">
                     <p>{products.name}</p>
-                    <button onClick={() => handleAddToCard(products)}>Add To Card </button>
+                    <button
+                      className="btnAdd"
+                      onClick={() => handleAddToCard(products)}
+                    >
+                      ADD TO CARD{" "}
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>

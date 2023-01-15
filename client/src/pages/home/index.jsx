@@ -5,19 +5,24 @@ import Bgphoto from "../../images/bg-img.webp";
 import Carousel from "../../components/Carousel";
 import Button from "../../components/button";
 import Carousel2 from "../../components/Carousel2";
+import {Helmet} from "react-helmet";
+
 
 const Home = ({ basket, setBasket }) => {
   return (
     <div className="home">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home Page</title>
+      </Helmet>
       <div className="main-text">
         <img src={Bgphoto} alt="" className="image" />
         <h3 className="gradient">unique</h3>
         <h1 className="decor"> DECOR </h1>
-        <Button btnName={'NEW COLLECTION'}/>
+        <Button btnName={"NEW COLLECTION"} />
       </div>
 
       <div className="container">
-
         {/* Home decore and  tableware links section*/}
 
         <div className="second-section">
@@ -78,11 +83,11 @@ const Home = ({ basket, setBasket }) => {
       {/* Carousel section */}
 
       <div className="carousel">
-        <Carousel  basket={basket} setBasket={setBasket}/>
+        <Carousel basket={basket} setBasket={setBasket} />
       </div>
 
       <div className="btn-2">
-        <Button btnName={'ALL PRODUCTS'}/>
+        <Button btnName={"ALL PRODUCTS"} />
       </div>
 
       {/* Decorative links section */}
@@ -187,7 +192,6 @@ const Home = ({ basket, setBasket }) => {
             </Link>
           </div>
         </div> */}
-        
       </div>
     </div>
   );

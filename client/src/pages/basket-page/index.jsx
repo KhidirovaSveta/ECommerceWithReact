@@ -2,6 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import BgCup from "../../components/bg-cup";
 import "./index.scss";
+import {Helmet} from "react-helmet";
+
 
 const BasketPage = ({ basket, setBasket }) => {
   const handleRemove = (id) => {
@@ -11,6 +13,10 @@ const BasketPage = ({ basket, setBasket }) => {
   return (
     <div>
       <BgCup bgCupName={"Your Shopping Cart"} bgName={"Your Shopping Cart"} />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Basket</title>
+      </Helmet>
       <div className="container">
         <div className="basket">
           <div className="my-cart">
