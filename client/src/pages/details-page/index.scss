@@ -5,8 +5,9 @@
     margin-bottom: 50px;
     font-family: "Urbanist", sans-serif;
     display: flex;
+    margin-top: 51px;
     .img-details {
-      width: 50%;
+      width: 70%;
       img {
         width: 100%;
       }
@@ -82,5 +83,23 @@
     line-height: 32px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .add-section {
+    margin-top: 30px;
+    button {
+      cursor: pointer;
+      font-size: 17px;
+      color: #fff;
+      border: none;
+    }
+    .addBtn {
+      background-color: #242424;
+      padding: 12px 35px;
+      margin-right: 15px;
+    }
+    .buyBtn {
+      padding: 12px 20px;
+      background-color: #ccc10b;
+    }
   }
 }

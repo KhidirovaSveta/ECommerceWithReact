@@ -17,7 +17,7 @@ const Account = () => {
   });
   return (
     <div className="container">
-      <BgCup />
+      <BgCup bgCupName={"Account"} bgName={"Account"}/>
       <div className="account">
         <h1>LOGIN</h1>
         <p>Please login below account detail</p>

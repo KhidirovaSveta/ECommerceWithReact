@@ -41,15 +41,15 @@ const Carousel = () => {
         {products?.map((products) => {
           return (
             <>
-              <SwiperSlide>
-                <div className="slider">
+              <SwiperSlide key={products.id}>
+                <div className="slider" >
                   <Link to={"/pages/details-page/" + products.id}>
                     {" "}
                     <img src={products.img1} alt="" />{" "}
                   </Link>
                   <div className="products-name">
                     <p>{products.name}</p>
-                    <p>{products.unitPrice}</p>
+                    <button>Add To Card </button>
                   </div>
                 </div>
               </SwiperSlide>

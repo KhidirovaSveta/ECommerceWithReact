@@ -6,9 +6,10 @@ import Footer from "./layouts/footer";
 import Account from "./pages/account";
 import DetailPage from "./pages/details-page";
 import { useState } from "react";
+import BasketPage from "./pages/basket-page";
 
 function App() {
-  const [basket, setBasket] = useState([])
+  const [basket, setBasket] = useState([]);
 
   return (
     <div className="App">
@@ -17,7 +18,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pages/blog" element={<Blog />} />
         <Route path="/pages/account" element={<Account />} />
-        <Route path="/pages/details-page/:id" element={<DetailPage />} />
+        <Route
+          path="/pages/details-page/:id"
+          element={<DetailPage basket={basket} setBasket={setBasket} />}
+        />
+        <Route
+          path="/pages/basket-page"
+          element={<BasketPage basket={basket} setBasket={setBasket} />}
+        />
       </Routes>
       <Footer />
     </div>

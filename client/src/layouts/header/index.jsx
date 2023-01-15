@@ -16,9 +16,9 @@ const Header = () => {
                 <li>
                   <NavLink to={"/"}> Home </NavLink>
                 </li>
-                <div class="dropdown">
-                <NavLink to={"/"}> Shop </NavLink>
-                  <div class="dropdown-options">
+                <div className="dropdown">
+                  <NavLink to={"/"}> Shop </NavLink>
+                  <div className="dropdown-options">
                     <Link> wood</Link>
                     <Link> wood</Link>
                     <Link> wood</Link>
@@ -37,7 +37,9 @@ const Header = () => {
                 <i className="fa-regular fa-user icon"></i>
               </Link>
               <i className="fa-regular fa-heart icon"></i>
-              <i className="fa-solid fa-basket-shopping icon"></i>
+              <Link to={"/pages/basket-page"}>
+                <i className="fa-solid fa-basket-shopping icon"></i>
+              </Link>
             </div>
           </div>
         </div>
