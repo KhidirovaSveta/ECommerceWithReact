@@ -22,12 +22,12 @@ const products = [
     // },
     sale: "52%",
     priceOff: "£50.00",
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
 
   {
@@ -43,12 +43,12 @@ const products = [
     img1: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-07-c.jpg?v=1641206171",
     img2: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-07-b.jpg?v=1641206171",
     // },
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
   {
     id: 3,
@@ -65,12 +65,12 @@ const products = [
     // },
     sale: "40%",
     priceOff: "£50.00",
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
 
   {
@@ -85,12 +85,12 @@ const products = [
     img2: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-03-a_35fd05e1-23aa-4301-a342-234556352ffd.jpg?v=1641206188",
     img3: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-03-b_a2a4a852-0de0-4838-aeef-edebdb17f974.jpg?v=1641206188",
     // },
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
 
   {
@@ -106,12 +106,12 @@ const products = [
     img3: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-05-b.jpg?v=1641206148",
     img4: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-05-c.jpg?v=1641206148",
     // },
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
   {
     id: 6,
@@ -127,12 +127,12 @@ const products = [
     // },
     sale: "52%",
     priceOff: "£50.00",
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
 
   {
@@ -148,12 +148,12 @@ const products = [
     img3: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-04-a.jpg?v=1641206058",
     img4: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-04-b.jpg?v=1641206057",
     // },
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
 
   {
@@ -169,12 +169,12 @@ const products = [
     img3: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-06-b.jpg?v=1641206167",
     img4: "https://cdn.shopify.com/s/files/1/0552/1991/2785/products/art-store-product-06-c.jpg?v=1641206167",
     //   },
-    size: {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl",
-    },
+    // size: {
+      s: "S",
+      m: "M",
+      l: "L",
+      xl: "XL",
+    // },
   },
   {
     id: 9,
@@ -191,12 +191,14 @@ const products = [
     // },
     sale: "26%",
     priceOff: "£50.00",
-    size: {
+        // size: {
+
       s: "24X16",
       m: "24X18",
       l: "24X20",
       xl: "28X22",
-    },
+  // }
+
   },
 ];
 
