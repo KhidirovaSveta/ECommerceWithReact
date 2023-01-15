@@ -68,6 +68,13 @@ const DetailPage = ({ basket, setBasket }) => {
 
           <p className="description">{detail.description}</p>
 
+          {/* Color section */}
+          <div className="size-section">
+            <p>COLOR: </p>
+            <img src={detail.img2} alt="" />
+            <img src={detail?.img3} alt="" />
+          </div>
+
           {/* size section */}
           <div className="size-section">
             <p>SIZE: </p>
