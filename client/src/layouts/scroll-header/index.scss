@@ -30,6 +30,10 @@
       column-gap: 25px;
       li {
         list-style: none;
+        a {
+          text-decoration: none;
+          color: #0a0a23;
+        }
       }
     }
   }
@@ -37,5 +41,48 @@
     color: #0a0a23;
     padding: 0 15px;
     font-size: 17px;
+  }
+}
+
+.shop {
+  display: flex;
+}
+
+.shop {
+  display: flex;
+  padding: 10px 35px;
+  background-color: #fff;
+  .categoriesOne {
+    background-color: #fff;
+    .menu {
+      background-color: #fff;
+      .yellow {
+        color: #ccc10b;
+        font-weight: 600;
+      }
+    }
+    .bold{
+      font-weight: 600;
+    }
+  }
+  .categoriesTwo {
+    background-color: #fff;
+    .menu {
+      background-color: #fff;
+      .yellow {
+        color: #ccc10b;
+        font-weight: 600;
+      }
+    }
+  }
+  .categoriesThird {
+    background-color: #fff;
+    .menu {
+      background-color: #fff;
+      .yellow {
+        color: #ccc10b;
+        font-weight: 600;
+      }
+    }
   }
 }

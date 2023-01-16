@@ -2,8 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
 import Logo from "../../images/logo.webp";
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Space } from "antd";
+import { Dropdown, Menu } from "antd";
 
 const Header = ({ count, setCount }) => {
   const stickyHeader = useRef();
@@ -22,62 +21,6 @@ const Header = ({ count, setCount }) => {
 
   // page
 
-  const items = [
-    {
-      key: "1",
-      label: "About Us",
-      children: [
-        {
-          key: "1-1",
-          label: "About Modern",
-        },
-        {
-          key: "1-2",
-          label: "About Simple",
-        },
-      ],
-    },
-
-    {
-      key: "2",
-      label: "Contact Us",
-      children: [
-        {
-          key: "1-1",
-          label: "Contact Modern",
-        },
-        {
-          key: "1-2",
-          label: "Contact Simple",
-        },
-      ],
-    },
-    {
-      key: "3",
-      label: "FAQS",
-    },
-    {
-      key: "4",
-      label: "Payment Policy",
-    },
-    {
-      key: "5",
-      label: "Privacy Policy",
-    },
-    {
-      key: "6",
-      label: "Payment Policy",
-    },
-    {
-      key: "7",
-      label: "Terms & Condition",
-    },
-    {
-      key: "8",
-      label: "Page 404",
-    },
-  ];
-
   return (
     <div>
       <div>
@@ -93,42 +36,91 @@ const Header = ({ count, setCount }) => {
                   {" "}
                   <NavLink to={"/"}> Home </NavLink>
                 </li>
-                <li>
-                  <Dropdown
-                    overlay={
-                      <Menu>
-                        <Menu.Item key="0">Banner With Sidebar</Menu.Item>
-                        <Menu.Item key="1">Boxed Banner</Menu.Item>
-                        <Menu.Item key="2">Infinite Ajaxscroll</Menu.Item>
-                        <Menu.Item key="3">Horizontal Filter</Menu.Item>
-                        <Menu.Item key="4">Navigation Filter</Menu.Item>
-                        <Menu.Item key="5">Navigation Filter</Menu.Item>
-                        <Menu.Item key="6">Off-Canvas Filter</Menu.Item>
-                        <Menu.Item key="7">Right Toggle Sidebar</Menu.Item>
-                      </Menu>
-                    }
-                    trigger={["hover"]}
-                  >
-                    <a
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Shop
-                    </a>
-                  </Dropdown>
-                </li>
 
                 <li>
                   <Dropdown
                     overlay={
                       <Menu>
-                        <Menu.Item key="0">Banner With Sidebar</Menu.Item>
-                        <Menu.Item key="1">Boxed Banner</Menu.Item>
-                        <Menu.Item key="2">Infinite Ajaxscroll</Menu.Item>
-                        <Menu.Item key="3">Horizontal Filter</Menu.Item>
-                        <Menu.Item key="4">Navigation Filter</Menu.Item>
-                        <Menu.Item key="5">Navigation Filter</Menu.Item>
-                        <Menu.Item key="6">Off-Canvas Filter</Menu.Item>
-                        <Menu.Item key="7">Right Toggle Sidebar</Menu.Item>
+                        <div className="shop">
+                          <div className="categoriesOne">
+                            <Menu.Item key="0" className="menu">
+                              <span className="yellow">BEST SELLER</span>
+                            </Menu.Item>
+                            <Menu.Item key="1" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="2" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="3" className="menu">
+                              Wooden Bowl Set
+                            </Menu.Item>
+                            <Menu.Item key="4" className="menu">
+                              Wood Stand
+                            </Menu.Item>
+                            <Menu.Item key="5" className="menu">
+                              Wood Bowl
+                            </Menu.Item>
+                            <Menu.Item key="6" className="menu">
+                              Ceramic Stand
+                            </Menu.Item>
+                            <Menu.Item key="7" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                          </div>
+                          <div className="categoriesTwo">
+                            <Menu.Item key="15" className="menu">
+                              <span className="yellow">DECORATIVER</span>
+                            </Menu.Item>
+                            <Menu.Item key="8" className="menu">
+                              Wood Kitchen Stand
+                            </Menu.Item>
+                            <Menu.Item key="9" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="10" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="11" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="12" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="13" className="menu">
+                              Wood Stand
+                            </Menu.Item>
+                            <Menu.Item key="14" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                          </div>
+                          <div className="categoriesThird">
+                            <Menu.Item key="15" className="menu">
+                              <span className="yellow">HOME DECOR</span>
+                            </Menu.Item>
+                            <Menu.Item key="15" className="menu">
+                              Wood Stand
+                            </Menu.Item>
+                            <Menu.Item key="16" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="17" className="menu">
+                              Wood Kitchen Stand
+                            </Menu.Item>
+                            <Menu.Item key="18" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="19" className="menu">
+                              Ceramic Stand
+                            </Menu.Item>
+                            <Menu.Item key="20" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="21" className="menu">
+                              Wood Stand
+                            </Menu.Item>
+                          </div>
+                        </div>
                       </Menu>
                     }
                     trigger={["hover"]}
@@ -137,7 +129,90 @@ const Header = ({ count, setCount }) => {
                       className="ant-dropdown-link"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Categories
+                      Shop<i className="fa-solid fa-angle-down"></i>
+                    </a>
+                  </Dropdown>
+                </li>
+
+                <li>
+                  <Dropdown
+                    overlay={
+                      <Menu>
+                        <div className="shop">
+                          <div className="categoriesOne">
+                            <Menu.Item key="15" className="menu bold">
+                              <span>BEST SELLER</span>
+                            </Menu.Item>
+                            <Menu.Item key="8" className="menu bold">
+                              {" "}
+                              <span>HOME DECOR </span>
+                            </Menu.Item>
+                            <Menu.Item key="9" className="menu bold">
+                              <span>DECORATIVER</span>
+                            </Menu.Item>
+                            <Menu.Item key="10" className="menu bold">
+                              <span>TABLEWARE</span>
+                            </Menu.Item>
+                            <Menu.Item key="11" className="menu bold">
+                              <span>TOP SELLING</span>
+                            </Menu.Item>
+                          </div>
+                          <div className="categoriesTwo">
+                            <Menu.Item key="0" className="menu">
+                              <span className="yellow">BEST SELLER</span>
+                            </Menu.Item>
+                            <Menu.Item key="1" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="2" className="menu">
+                              Wooden Stand
+                            </Menu.Item>
+                            <Menu.Item key="3" className="menu">
+                              Wooden Bowl Set
+                            </Menu.Item>
+                            <Menu.Item key="4" className="menu">
+                              Wood Stand
+                            </Menu.Item>
+                            <Menu.Item key="5" className="menu">
+                              Wood Bowl
+                            </Menu.Item>
+                            <Menu.Item key="6" className="menu">
+                              Ceramic Stand
+                            </Menu.Item>
+                            <Menu.Item key="7" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                          </div>
+                          <div className="categoriesThird">
+                            <Menu.Item key="15" className="menu">
+                              <span className="yellow">HOME DECOR</span>
+                            </Menu.Item>
+                            <Menu.Item key="15" className="menu">
+                              Wooden Bowl Set
+                            </Menu.Item>
+                            <Menu.Item key="16" className="menu">
+                              Wood Bowl
+                            </Menu.Item>
+                            <Menu.Item key="16" className="menu yellow">
+                              <span>TABLEWARE</span>
+                            </Menu.Item>
+                            <Menu.Item key="17" className="menu">
+                              Antique Kettle
+                            </Menu.Item>
+                            <Menu.Item key="18" className="menu">
+                              Ceramic Stand
+                            </Menu.Item>
+                          </div>
+                        </div>
+                      </Menu>
+                    }
+                    trigger={["hover"]}
+                  >
+                    <a
+                      className="ant-dropdown-link"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Product<i className="fa-solid fa-angle-down"></i>
                     </a>
                   </Dropdown>
                 </li>
@@ -149,16 +224,44 @@ const Header = ({ count, setCount }) => {
 
                 <li>
                   <Dropdown
-                    menu={{
-                      items,
-                    }}
+                    overlay={
+                      <Menu>
+                        <div className="shop">
+                          <div className="categoriesOne">
+                            <Menu.Item key="15" className="menu">
+                              ABOUT US
+                            </Menu.Item>
+                            <Menu.Item key="8" className="menu">
+                              {" "}
+                              CONTACT US{" "}
+                            </Menu.Item>
+                            <Menu.Item key="9" className="menu">
+                              FAQS
+                            </Menu.Item>
+                            <Menu.Item key="10" className="menu">
+                              PAYMENT POLICE
+                            </Menu.Item>
+                            <Menu.Item key="11" className="menu">
+                              PRIVACY POLICE
+                            </Menu.Item>
+                            <Menu.Item key="11" className="menu">
+                              RETURN POLICE
+                            </Menu.Item>
+                            <Menu.Item key="11" className="menu">
+                              PAGE 404
+                            </Menu.Item>
+                          </div>
+                        </div>
+                      </Menu>
+                    }
+                    trigger={["hover"]}
                   >
-                    {/* <a onClick={(e) => e.preventDefault()}> */}
-                    <Space>
-                      Page
-                      <DownOutlined />
-                    </Space>
-                    {/* </a> */}
+                    <a
+                      className="ant-dropdown-link"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Page<i className="fa-solid fa-angle-down"></i>
+                    </a>
                   </Dropdown>
                 </li>
               </ul>
@@ -173,7 +276,7 @@ const Header = ({ count, setCount }) => {
               </NavLink>
               <i className="fa-regular fa-heart icon"></i>
               <NavLink to={"/pages/basket-page"}>
-              <i className="fa-solid fa-bag-shopping icon">
+                <i className="fa-solid fa-bag-shopping icon">
                   {" "}
                   <sub>{count}</sub>
                 </i>
@@ -181,12 +284,6 @@ const Header = ({ count, setCount }) => {
             </div>
           </div>
         </div>
-        {/* <div className="main-block">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            lacinia pretium erat ac rutrum.
-          </p>
-        </div> */}
       </div>
     </div>
   );

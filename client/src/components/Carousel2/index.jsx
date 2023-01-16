@@ -36,7 +36,7 @@ const Carousel2 = () => {
                 </Link>
                 <div className="products-name">
                   <p className="descriptionItem">{items.descriptionItem}</p>
-                  <p>03 JAN, 2022</p>
+                  <p className="data">03 JAN, 2022</p>
                 </div>
               </div>
             </SwiperSlide>

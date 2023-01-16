@@ -22,7 +22,7 @@ body {
 }
 
 .swiper-slide {
-  text-align: center;
+  // text-align: center;
   background: #fff;
 
   /* Center slide text vertically */
@@ -51,14 +51,16 @@ body {
   background-color: #eeeeee;
   .products-name {
     background-color: #eeeeee;
-    .descriptionItem{
+    text-align: start;
+    .descriptionItem {
       color: rgba(91, 91, 91, 0.8);
-      font-size: 18px;
+      font-size: 20px;
       line-height: 29px;
       width: 67%;
+      padding-bottom: 15px;
     }
-    span{
-      text-align: start;
+    .data {
+      font-size: 17px;
     }
   }
 }
