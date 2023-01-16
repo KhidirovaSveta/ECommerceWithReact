@@ -173,7 +173,7 @@ const Header = ({ count, setCount }) => {
               </NavLink>
               <i className="fa-regular fa-heart icon"></i>
               <NavLink to={"/pages/basket-page"}>
-              <i className="fa-solid fa-bag-shopping">
+              <i className="fa-solid fa-bag-shopping icon">
                   {" "}
                   <sub>{count}</sub>
                 </i>

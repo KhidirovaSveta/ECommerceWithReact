@@ -1,47 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-
-import Product11 from "../../images/products/art-store-blog-01.webp";
-import Product12 from "../../images/products/art-store-blog-02.webp";
-import Product13 from "../../images/products/art-store-blog-03.webp";
-import Product4 from "../../images/products/art-store-blog-04.webp";
-import Product5 from "../../images/products/art-store-blog-05.webp";
-import Product6 from "../../images/products/art-store-blog-06.webp";
-
-
 import "./index.scss";
-// import { Pagination } from "swiper";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Carousel2 = () => {
-  return (
-    <>
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        // modules={[Pagination]}
-        className="mySwiper"
-      >
-   
-        <div className="card">
-        <SwiperSlide> <img src={Product11} alt="" /></SwiperSlide>
-        <div className="text">
-          <p>salam</p>
-        </div>
-        </div>
-        <SwiperSlide> <img src={Product12} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={Product13} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={Product4} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={Product5} alt="" /></SwiperSlide>
-        <SwiperSlide> <img src={Product6} alt="" /></SwiperSlide>
+  const [items, setItems] = useState([]);
 
-      </Swiper>
-    </>
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/products2/")
+      .then((data) => setItems(data.data));
+  }, []);
+
+  return (
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      centeredSlides={true}
+      pagination={{
+        clickable: true,
+      }}
+      className="mySwiper"
+    >
+      {items?.map((items) => {
+        return (
+          <>
+            <SwiperSlide key={items.id}>
+              <div className="slider">
+                <Link to={"/"}>
+                  {" "}
+                  <img src={items.img} alt="" />{" "}
+                </Link>
+                <div className="products-name">
+                  <p className="descriptionItem">{items.descriptionItem}</p>
+                  <p>03 JAN, 2022</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </>
+        );
+      })}
+    </Swiper>
   );
 };
 
