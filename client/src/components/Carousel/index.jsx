@@ -7,7 +7,7 @@ import "./index.scss";
 import { useState } from "react";
 import axios from "axios";
 
-const Carousel = ({ basket, setBasket, count, setCount }) => {
+const Carousel = ({ basket, setBasket, count, setCount, wishlist, setWishlist}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,6 +22,14 @@ const Carousel = ({ basket, setBasket, count, setCount }) => {
       alert("Already added");
     }
   };
+
+  const handleWishlist = (el) => {
+     if(!wishlist.find((e) => e.id === el.id)){
+        setWishlist([...wishlist, el])
+     }else{
+      alert("already added")
+     }
+  }
 
   return (
     <div className="carousel">
@@ -44,6 +52,7 @@ const Carousel = ({ basket, setBasket, count, setCount }) => {
                     {" "}
                     <img src={products.img1} alt="" />{" "}
                   </Link>
+                  <button className="wishBtn" onClick={() => handleWishlist(products)}>{(wishlist.find((e) => e.id === products.id)) ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}</button>
                   <div className="products-name">
                     <p>{products.name}</p>
                     <button

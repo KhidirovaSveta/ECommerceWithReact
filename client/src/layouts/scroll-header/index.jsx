@@ -274,7 +274,9 @@ const Header = ({ count, setCount }) => {
               <NavLink to={"/pages/account"}>
                 <i className="fa-regular fa-user icon"></i>
               </NavLink>
+              <NavLink to={"/pages/wishlits"}>
               <i className="fa-regular fa-heart icon"></i>
+              </NavLink>
               <NavLink to={"/pages/basket-page"}>
                 <i className="fa-solid fa-bag-shopping icon">
                   {" "}

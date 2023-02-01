@@ -8,7 +8,7 @@ import Carousel2 from "../../components/Carousel2";
 import {Helmet} from "react-helmet";
 
 
-const Home = ({ basket, setBasket, count, setCount}) => {
+const Home = ({ basket, setBasket, count, setCount,  wishlist ,setWishlist}) => {
   return (
     <div className="home">
       <Helmet>
@@ -83,7 +83,7 @@ const Home = ({ basket, setBasket, count, setCount}) => {
       {/* Carousel section */}
 
       <div className="carousel">
-        <Carousel basket={basket} setBasket={setBasket} count={count} setCount={setCount} />
+        <Carousel basket={basket} setBasket={setBasket} count={count} setCount={setCount}  wishlist={wishlist} setWishlist={setWishlist}/>
       </div>
 
       <div className="btn-2">
